@@ -71,7 +71,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
                     <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors duration-600 ${isScrolled ? 'bg-white' : ''}`} style={!isScrolled ? { backgroundColor: 'var(--theme-primary)' } : {}}>
-                        <img src="/logo.svg" alt="Blissful Logo" className="w-6 h-6 transition-all duration-600" style={isScrolled ? { filter: 'brightness(0.6) sepia(1) saturate(10) hue-rotate(-50deg)' } : {}} />
+                        <img src="blissful/logo.svg" alt="Blissful Logo" className="w-6 h-6 transition-all duration-600" style={isScrolled ? { filter: 'brightness(0.6) sepia(1) saturate(10) hue-rotate(-50deg)' } : {}} />
                     </div>
                     <span className={`font-bold text-xl transition-colors duration-600 ${isScrolled ? 'text-white' : ''}`} style={!isScrolled ? { color: 'var(--theme-text)' } : {}}>Blissful</span>
                 </div>

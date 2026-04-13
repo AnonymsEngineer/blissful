@@ -7,7 +7,7 @@ const Problem = ({ className = '' }) => (
         <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-stretch" style={{ backgroundColor: 'var(--theme-card-background)' }}>
             <div className="order-2 md:order-1 md:col-span-1 flex items-stretch">
                 <ImageFrame
-                    src="/p2.png"
+                    src="blissful/p2.png"
                     alt="Collaboration"
                     className="h-64 md:h-full w-full"
                 />

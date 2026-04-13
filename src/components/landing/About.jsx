@@ -20,7 +20,7 @@ const About = ({ className = '' }) => (
                 </div>
                 <div className="md:col-span-1 p-8">
                     <ImageFrame
-                        src="/about1.png"
+                        src="blissful/about1.png"
                         alt="Mentor Profile"
                         className="w-full max-h-80"
                     />
@@ -31,7 +31,7 @@ const About = ({ className = '' }) => (
                 <div className="md:col-span-1 p-8 order-2 md:order-1 flex items-center justify-center">
                     <div className="w-full" style={{ height: '480px' }}>
                         <ImageFrame
-                            src="/about2.png"
+                            src="blissful/about2.png"
                             alt="Mentoring in Action"
                             className="w-full h-full"
                         />

@@ -14,7 +14,7 @@ You came like an angel, helping me learn how to live a calm and balanced life in
 You deserve all the love and happiness, and I truly hope all the positive energy returns to you.
 
 — From a happy heart `,
-        img: "/surbhi.png"
+        img: "blissful/surbhi.png"
     },
     {
         name: "Dr Aleena Hussain",
@@ -37,13 +37,13 @@ simran helped me to cope up during my bad
 And today it feels much lighter
 
 Thanku once again simran !`,
-        img: "/aleena.png"
+        img: "blissful/aleena.png"
     },
     {
         name: "Divyanshu",
         role: "Stock Market Trader",
         text: "The program was incredibly effective. The biggest change has been my ability to manage stress. I’ve gone from overanalysing everything to approaching tasks with a tension-free mindset. Seeing these tangible changes in my life so quickly has been impressive. It has really helped me break old patterns.",
-        img: "/divyanshu.png"
+        img: "blissful/divyanshu.png"
     },
     {
         name: "Ojasvi Singh Sisodiya",
@@ -55,7 +55,7 @@ One of the most surprising and life-changing things was how she helped me with m
 But what makes her truly special is that she doesn’t just focus on one problem. She helps you understand how small changes in daily habits, mindset, and self-care can completely transform how you feel about yourself. Because of her, I started treating myself with more kindness, patience, and confidence. The way I see myself and handle my life has changed in such a positive way.
 
 She is an amazing person, a supportive guide, and someone who genuinely wants to see others grow and heal. I’m truly thankful for everything she has taught me and the positive impact she has had on my life.`,
-        img: "/ojasvi.png"
+        img: "blissful/ojasvi.png"
     },
     {
         name: "Deesha",
@@ -63,7 +63,7 @@ She is an amazing person, a supportive guide, and someone who genuinely wants to
         text: `Hey, the session was great! I would definitely recommend it to my friends too, because I feel our generation really needs this. Meditation really helped me stay calm, think before I speak, and deal with stress that I used to hold onto for days.
 
 Now, I genuinely practice on my own every day—whether it's a little exercise, dancing, or doing yoga. One of the best things that came out of it was developing the habit of eating healthy and waking up early in the morning. That has made a big positive difference in my life. Hope more people connect to you for their inner peace 🙌🏼`,
-        img: "/deesha.png"
+        img: "blissful/deesha.png"
     },
     {
         name: "Jeetu",
@@ -74,6 +74,6 @@ Now, I genuinely practice on my own every day—whether it's a little exercise, 
 इसे लगातार दो-तीन हफ्ते करने के बाद मैंने अपने अंदर एक सकारात्मक ऊर्जा को महसूस किया। इसके साथ ही मुझे बेचैनी और घबराहट कम होने लगी। लेकिन अभी यह पूरी तरह खत्म नहीं हुई है।
 
 यदि मैं इस दैनिक दिनचर्या को अपनी ज़िंदगी का हिस्सा बना लूँ, तो मैं जल्द ही ठीक हो सकता हूँ। मुझे एक सही रास्ता और बातें बताने के लिए सिमरन दीदी का बहुत-बहुत धन्यवाद। `,
-        img: "/jeetu.png"
+        img: "blissful/jeetu.png"
     }
 ];
