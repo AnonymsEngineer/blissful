@@ -19,7 +19,7 @@ const Hero = ({ onApplyClick }) => (
             </div>
             <div className="md:col-span-1 w-full h-full flex items-center">
                 <ImageFrame
-                    src="/p1.png"
+                    src="p1.png"
                     alt="Workspace"
                     className="h-64 md:h-full min-h-[250px] w-full"
                 />

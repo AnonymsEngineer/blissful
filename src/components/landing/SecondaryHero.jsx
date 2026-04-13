@@ -12,7 +12,7 @@ const SecondaryHero = ({ className = '' }) => (
             </div>
             <div className="md:col-span-1 w-full h-full flex items-center">
                 <ImageFrame
-                    src="/p3.png"
+                    src="p3.png"
                     alt="Team Meeting"
                     className="h-64 md:h-full min-h-[250px] w-full"
                 />
