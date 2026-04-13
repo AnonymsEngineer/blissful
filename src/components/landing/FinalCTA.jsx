@@ -14,7 +14,7 @@ const FinalCTA = ({ onApplyClick, className = '' }) => (
                     ~ Simran
                 </p>
             </div>
-            <ImageFrame src="blissful/finalCTA.png" alt="Ultimate Focus" className="h-64 md:h-full min-h-[250px] w-full" />
+            <ImageFrame src="/finalCTA.png" alt="Ultimate Focus" className="h-64 md:h-full min-h-[250px] w-full" />
         </div>
         <div className="flex flex-col items-center gap-4">
             <Button onClick={onApplyClick}>Apply Now</Button>
