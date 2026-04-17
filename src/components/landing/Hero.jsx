@@ -7,11 +7,11 @@ const Hero = ({ onApplyClick }) => (
     <Section id="home" className="pt-32 pb-20">
         <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-center" style={{ backgroundColor: 'var(--theme-card-background)' }}>
             <div className="space-y-6 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
-                <h2 className="text-4xl md:text-6xl font-bold leading-tight" style={{ color: 'var(--theme-text)' }}>
-                    Master your STRESS & unlock the version of you that actually WINS
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight" style={{ color: 'var(--theme-text)' }}>
+                    Master your <span className="text-4xl md:text-6xl font-bold leading-tight" style={{ color: 'var(--theme-primary)' }}>STRESS</span> & unlock the version of you that actually <span className="text-4xl md:text-6xl font-bold leading-tight" style={{ color: 'var(--theme-primary)' }}>WINS</span>
                 </h2>
                 <p className="text-lg opacity-80 max-w-xl">
-                    - with Simran Makwana <br /> Lifestyle and Wellness Coach
+                    <span className="font-bold">- with Simran Makwana</span> <br /> Lifestyle and Wellness Coach
                 </p>
                 <div className="pt-4 w-full flex justify-center md:justify-start">
                     <Button onClick={onApplyClick}>Let's Connect</Button>

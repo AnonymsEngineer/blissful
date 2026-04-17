@@ -28,7 +28,7 @@ const WhoIsThisFor = ({ onApplyClick, className = '' }) => (
             ].map((item, i) => (
                 <div key={i} className="who-card p-6 rounded-2xl shadow-sm border border-[var(--theme-border)]/5" style={{ backgroundColor: 'var(--theme-card-background)' }}>
                     <h3 className="font-bold text-lg mb-2" style={{ color: 'var(--theme-text)' }}>{item.t}</h3>
-                    <p className="opacity-60 text-sm" style={{ textAlign: 'justify' }}>{item.d}</p>
+                    <p className="opacity-70 text-sm" style={{ textAlign: 'justify' }}>{item.d}</p>
                 </div>
             ))}
         </div>

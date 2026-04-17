@@ -14,9 +14,9 @@ const Problem = ({ className = '' }) => (
             </div>
             <div className="space-y-6 order-1 md:order-2 md:col-span-2 flex flex-col justify-center">
                 <div>
-                    <h2 className="text-3xl font-bold mb-4">Let me ask you something</h2>
+                    <h2 className="text-3xl font-bold mb-4" style={{ color: 'var(--theme-primary)' }}>Let Me Ask You Something!</h2>
                     <p className="opacity-80 text-lg leading-relaxed mb-4" style={{ textAlign: 'justify' }}>
-                        Do you feel constantly stressed, mentally exhausted and emotionally unstable? <br /> Replaying the same thoughts on loop, unable to break free from the cycle no matter how hard you try.
+                        Do you feel constantly stressed, mentally exhausted and emotionally drained? <br /> Replaying the same thoughts on loop, unable to break free from the cycle no matter how hard you try.
                     </p>
                     <p className="opacity-80 text-lg leading-relaxed" style={{ textAlign: 'justify' }}>
                         And the worst part, you know if you could fix this one thing, your entire life would start to feel better, clearer & finally in control.

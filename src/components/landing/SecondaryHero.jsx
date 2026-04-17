@@ -6,8 +6,9 @@ const SecondaryHero = ({ className = '' }) => (
     <Section className={`py-20 ${className}`}>
         <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-center" style={{ backgroundColor: 'var(--theme-card-background)' }}>
             <div className="space-y-6 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 className="text-3xl font-bold" style={{ color: 'var(--theme-primary)' }}>Beyond Inner Chaos</h2>
                 <p className="text-lg opacity-80 max-w-xl leading-relaxed" style={{ textAlign: 'justify' }}>
-                    This is not another generic "Stress Management" program it's a powerful step by step framework that blends modern science backed techniques with timeless traditional methods for real & practical results.
+                    This is not another generic "Stress Management" program; it's a powerful, step-by-step framework that blends modern science backed techniques with timeless traditional methods for real & practical results.
                 </p>
             </div>
             <div className="md:col-span-1 w-full h-full flex items-center">

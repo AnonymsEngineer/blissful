@@ -19,10 +19,10 @@ const Graph = ({ className = '' }) => (
             }
         `}</style>
         <div className="text-center mb-16">
-            <div className="inline-block px-8 py-2 border border-[var(--theme-border)]/20 rounded-full mb-4 shadow-sm" style={{ backgroundColor: 'var(--theme-card-background)' }}>
+            <div className="inline-block px-9 py-3 border border-[var(--theme-border)]/20 rounded-full mb-4 shadow-sm" style={{ backgroundColor: 'var(--theme-card-background)' }}>
                 <h2 className="text-xl md:text-2xl font-bold">The Trajectory of Growth</h2>
             </div>
-            <p className="opacity-60 max-w-xl mx-auto">This is a STRATEGIC 4-STAGE PROCESS designed to move you out of survival mode and back into control. Here's how it works - </p>
+            <p className="opacity-100 max-w-xl mx-auto">This is a <span style={{ fontWeight: 'bold', fontStyle: 'italic', color: 'var(--theme-primary)' }}>STRATEGIC 4-STAGE PROCESS</span> designed to move you out of survival mode and back into control. Here's how it works - </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
@@ -56,7 +56,7 @@ const Graph = ({ className = '' }) => (
                     </svg>
                 </div>
                 <div className="px-2 mt-4 text-center md:text-left">
-                    <p className="text-sm italic opacity-50 leading-relaxed">
+                    <p className="text-sm italic opacity-100 leading-relaxed">
                         The chart above illustrates the compound effect of consistent implementation of the program.
                     </p>
                 </div>
@@ -75,7 +75,7 @@ const Graph = ({ className = '' }) => (
                         </div>
                         <div>
                             <h4 className="font-bold text-lg mb-2" style={{ color: 'var(--theme-text)' }}>Stage {stage.s}: {stage.t}</h4>
-                            <p className="text-sm opacity-60 leading-relaxed" style={{ textAlign: 'justify' }}>{stage.d}</p>
+                            <p className="text-sm opacity-70 leading-relaxed" style={{ textAlign: 'justify' }}>{stage.d}</p>
                         </div>
                     </div>
                 ))}
