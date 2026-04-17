@@ -18,7 +18,7 @@ const Testimonials = ({ selectedTestimonial, setSelectedTestimonial }) => {
                         box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
                     }
                 `}</style>
-                <h2 className="text-3xl font-bold text-center mb-12">Impact Stories</h2>
+                <h2 className="text-3xl font-bold text-center mb-12" style={{ color: 'var(--theme-primary)' }}>Impact Stories</h2>
 
                 <div className="relative overflow-hidden w-full">
                     <div className={`animate-scroll ${selectedTestimonial ? 'paused' : ''}`}>

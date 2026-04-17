@@ -22,19 +22,19 @@ const Graph = ({ className = '' }) => (
             <div className="inline-block px-8 py-2 border border-[var(--theme-border)]/20 rounded-full mb-4 shadow-sm" style={{ backgroundColor: 'var(--theme-card-background)' }}>
                 <h2 className="text-xl md:text-2xl font-bold">The Trajectory of Growth</h2>
             </div>
-            <p className="opacity-60 max-w-xl mx-auto">This is a STRATEGIC 4-STAGE PROCESS designed to move you out of survival mode and back into control.Here's how it works - </p>
+            <p className="opacity-60 max-w-xl mx-auto">This is a STRATEGIC 4-STAGE PROCESS designed to move you out of survival mode and back into control. Here's how it works - </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="flex flex-col">
                 <div className="w-full aspect-square relative border-l-2 border-b-2 border-[var(--theme-border)]/40 p-4 mb-10">
-                    <div className="absolute -left-16 top-0 bottom-0 flex items-center pointer-events-none">
-                        <span className="transform -rotate-90 text-[10px] font-bold tracking-[0.25em] text-[var(--theme-border)]/40 uppercase whitespace-nowrap">
+                    <div className="absolute -left-8 top-0 bottom-0 flex items-center pointer-events-none">
+                        <span className="transform -rotate-90 text-[12px] font-bold tracking-[0.25em] text-[var(--theme-border)]/40 uppercase whitespace-nowrap">
                             You
                         </span>
                     </div>
                     <div className="absolute -bottom-8 left-0 right-0 flex justify-center pointer-events-none">
-                        <span className="text-[10px] font-bold tracking-[0.25em] text-[var(--theme-border)]/40 uppercase">
+                        <span className="text-[12px] font-bold tracking-[0.25em] text-[var(--theme-border)]/40 uppercase">
                             Time
                         </span>
                     </div>
@@ -64,10 +64,10 @@ const Graph = ({ className = '' }) => (
 
             <div className="flex flex-col space-y-4">
                 {[
-                    { s: 1, t: "Mindset Shift", d: "We will work on how you think, eliminating overthinking and mental noise." },
-                    { s: 2, t: "Body Reset", d: "We will work on improving physical health." },
-                    { s: 3, t: "Energy Balancing", d: "We will restore natural energy levels by aligning body, mind & soul." },
-                    { s: 4, t: "Long term Mastery", d: "We will bring everything together and build sustainable lifestyle." }
+                    { s: 1, t: "Mindset Shift", d: "We begin by gently transforming the way you think, reducing overthinking and quieting mental noise to create clarity and calm." },
+                    { s: 2, t: "Body Reset", d: "From there, we focus on nurturing your physical well-being, helping your body feel stronger, lighter, and more balanced." },
+                    { s: 3, t: "Energy Balancing", d: "As your mind and body align, we work on restoring your natural energy flow, bringing harmony to your body, mind, and soul." },
+                    { s: 4, t: "Long term Mastery", d: "Finally, we bring it all together, guiding you towards a sustainable lifestyle that supports lasting growth and overall well-being." }
                 ].map((stage) => (
                     <div key={stage.s} className="stage-card bg-[#f7f5f2] p-8 rounded-2xl shadow-sm border flex items-start space-x-6" style={{ borderColor: 'var(--theme-border)', borderOpacity: 0.05 }}>
                         <div className="stage-number text-white font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md" style={{ backgroundColor: 'var(--theme-primary)' }}>

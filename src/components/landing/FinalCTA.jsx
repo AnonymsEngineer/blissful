@@ -7,8 +7,10 @@ const FinalCTA = ({ onApplyClick, className = '' }) => (
     <Section className={`py-20 ${className}`}>
         <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-center text-left mb-16" style={{ backgroundColor: 'var(--theme-card-background)' }}>
             <div className="space-y-6 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
+                <h2 className="text-3xl font-bold" style={{ color: 'var(--theme-primary)' }}>Special Note</h2>
                 <p className="text-lg leading-relaxed opacity-80" style={{ color: 'var(--theme-text)', textAlign: 'justify' }}>
-                    If you have landed here, it is not by accident. There is a voice inside you - whispering, telling you it's time to do it. I'll listen to you, guide you & support you in taking necessary actions in transforming your life. As Eminem says, "Look, if you had one shot or one opportunity to seize everything you ever wanted in one moment would you capture it or just let it slip?" <br /><br />
+                    If you have landed here, it is not by accident.<br />
+                    There is a voice inside you - whispering, telling you it's time to do it. I'll listen to you, guide you & support you in taking necessary actions in transforming your life. As Eminem says, <span style={{ backgroundColor: 'rgba(128, 0, 0, 0.15)', color: 'black', padding: '2px 4px', borderRadius: '5px' }}>"Look, if you had one shot or one opportunity to seize everything you ever wanted in one moment would you capture it or just let it slip?"</span> <br /><br />
                     I am ready when you are. <br />
                     With Love,<br />
                     ~ Simran
@@ -22,7 +24,7 @@ const FinalCTA = ({ onApplyClick, className = '' }) => (
                 * Limited slots available
             </p>
         </div>
-    </Section>
+    </Section >
 );
 
 export default FinalCTA;

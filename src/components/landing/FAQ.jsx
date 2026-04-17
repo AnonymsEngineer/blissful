@@ -43,7 +43,7 @@ const FAQ = ({ openFaq, toggleFaq, className = '' }) => (
                                 <span className="faq-question text-lg font-semibold transition-all" style={isOpen ? { color: 'var(--theme-primary)' } : { color: 'var(--theme-text)', opacity: 0.7 }}>
                                     {faq.q}
                                 </span>
-                                <ChevronDown className={`faq-icon w-4 h-4 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} style={isOpen ? { color: 'var(--theme-primary)' } : { color: 'var(--theme-text)', opacity: 0.3 }} />
+                                <ChevronDown className={`faq-icon w-4 h-4 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} style={isOpen ? { color: 'var(--theme-primary)' } : { color: 'var(--theme-primary)', opacity: 0.6 }} strokeWidth={3} />
                             </button>
                             <div className={`faq-content ${isOpen ? 'open' : ''}`}>
                                 <div className="text-lg opacity-70 leading-relaxed pb-4">{faq.a}</div>
