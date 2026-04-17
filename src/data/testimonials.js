@@ -17,6 +17,15 @@ You deserve all the love and happiness, and I truly hope all the positive energy
         img: "surbhi.png"
     },
     {
+        name: "Akshada Bhanose",
+        role: "Kitchen Designer",
+        text: `As a designer, I need clarity and focus in my work, but stress and confusion often blur it along with that I was also facing hormonal issues.
+Through sessions with Simran, I realised that changes in small habits creates a huge difference in our life. My hormones feel more balanced now. आज मुझे क्लेरिटी है decisions लेने का confidence के साथ। goals  पे focus करना easy पड़ता है। 
+एकदा try करा तुम्हाला खरस खूब फ़कर पड़े। 
+Thank you so much Simran for bringing clarity, energy and balance in my life.`,
+        img: "surbhi.png"
+    },
+    {
         name: "Dr Aleena Hussain",
         role: "Physiotherapist",
         text: `Hey hii there !!
