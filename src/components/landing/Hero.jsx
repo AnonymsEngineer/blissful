@@ -22,6 +22,7 @@ const Hero = ({ onApplyClick }) => (
                     src="p1.png"
                     alt="Workspace"
                     className="h-64 md:h-full min-h-[250px] w-full"
+                    objectPosition="top"
                 />
             </div>
         </div>
