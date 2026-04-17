@@ -19,7 +19,7 @@ const WhoIsThisFor = ({ onApplyClick, className = '' }) => (
                 color: var(--theme-primary) !important;
             }
         `}</style>
-        <h2 className="text-3xl font-bold mb-12" style={{ color: 'var(--theme-text)' }}>Who is this program for?</h2>
+        <h2 className="text-3xl font-bold mb-12" style={{ color: 'var(--theme-text)' }}>This Program is for -</h2>
         <div className="grid md:grid-cols-3 gap-6 mb-10 text-left">
             {[
                 { t: "Working Professionals", d: "For individuals in demanding careers, such as corporate, educators, healthcare professionals, engineers, and more who try to perform at their best while managing high levels of responsibility and pressure." },
