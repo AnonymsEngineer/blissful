@@ -69,7 +69,7 @@ const Graph = ({ className = '' }) => (
                     { s: 3, t: "Energy Balancing", d: "As your mind and body align, we work on restoring your natural energy flow, bringing harmony to your body, mind, and soul." },
                     { s: 4, t: "Long term Mastery", d: "Finally, we bring it all together, guiding you towards a sustainable lifestyle that supports lasting growth and overall well-being." }
                 ].map((stage) => (
-                    <div key={stage.s} className="stage-card bg-[#f7f5f2] p-8 rounded-2xl shadow-sm border flex items-start space-x-6" style={{ borderColor: 'var(--theme-border)', borderOpacity: 0.05 }}>
+                    <div key={stage.s} className="stage-card p-8 rounded-2xl shadow-sm border flex items-start space-x-6" style={{ borderColor: 'var(--theme-border)', borderOpacity: 0.05, backgroundColor: 'var(--theme-card-background)' }}>
                         <div className="stage-number text-white font-bold w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-md" style={{ backgroundColor: 'var(--theme-primary)' }}>
                             {stage.s}
                         </div>

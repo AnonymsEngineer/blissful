@@ -64,6 +64,9 @@ const Testimonials = ({ selectedTestimonial, setSelectedTestimonial }) => {
             {/* Testimonial Modal */}
             {selectedTestimonial && (
                 <div
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="testimonial-modal-title"
                     className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-10 modal-overlay"
                     style={{ backgroundColor: 'var(--theme-text)99', backdropFilter: 'blur(12px)' }}
                     onClick={() => setSelectedTestimonial(null)}
@@ -75,7 +78,8 @@ const Testimonials = ({ selectedTestimonial, setSelectedTestimonial }) => {
                     >
                         <button
                             onClick={() => setSelectedTestimonial(null)}
-                            className="absolute top-4 right-4 md:top-6 md:right-6 p-4 rounded-full bg-white shadow-md transition-all z-20 hover:scale-110 hover:shadow-lg"
+                            aria-label="Close testimonial"
+                            className="absolute top-4 right-4 md:top-6 md:right-6 p-4 rounded-full bg-white shadow-md transition-all z-20 hover:scale-110 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)]"
                             style={{ color: 'var(--theme-text)', opacity: 0.4 }}
                             onMouseEnter={(e) => e.target.style.color = 'var(--theme-primary)'}
                             onMouseLeave={(e) => e.target.style.color = 'var(--theme-text)'}
@@ -97,7 +101,7 @@ const Testimonials = ({ selectedTestimonial, setSelectedTestimonial }) => {
                                         </div>
                                     </div>
                                     <div className="text-center md:text-left">
-                                        <h3 className="text-2xl md:text-4xl font-bold tracking-tight mb-1" style={{ color: 'var(--theme-text)' }}>{selectedTestimonial.name}</h3>
+                                        <h3 id="testimonial-modal-title" className="text-2xl md:text-4xl font-bold tracking-tight mb-1" style={{ color: 'var(--theme-text)' }}>{selectedTestimonial.name}</h3>
                                         <div className="flex items-center justify-center md:justify-start space-x-2">
                                             <span className="h-px w-3 hidden md:block" style={{ backgroundColor: 'var(--theme-primary)', opacity: 0.3 }}></span>
                                             <p className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]" style={{ color: 'var(--theme-primary)' }}>{selectedTestimonial.role}</p>

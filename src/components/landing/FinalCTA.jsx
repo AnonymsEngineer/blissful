@@ -5,7 +5,7 @@ import Section from '../common/Section';
 
 const FinalCTA = ({ onApplyClick, className = '' }) => (
     <Section className={`py-20 ${className}`}>
-        <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-center text-left mb-16" style={{ backgroundColor: 'var(--theme-card-background)' }}>
+        <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-center text-left mb-8" style={{ backgroundColor: 'var(--theme-card-background)' }}>
             <div className="space-y-6 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
                 <h2 className="text-3xl font-bold" style={{ color: 'var(--theme-primary)' }}>Special Note</h2>
                 <p className="text-lg leading-relaxed opacity-80" style={{ color: 'var(--theme-text)', textAlign: 'justify' }}>

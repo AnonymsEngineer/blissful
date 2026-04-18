@@ -40,7 +40,7 @@ const About = ({ className = '' }) => (
                 <div className="md:col-span-2 p-8 md:p-12 flex flex-col justify-center order-1 md:order-2">
                     <div className="space-y-4 opacity-80 leading-relaxed text-lg">
                         <p style={{ textAlign: 'justify' }}>I took charge of my situation & found the courage to fix things. In the process of healing, I discovered powerful tools & practices that helped me build myself from within. What I learned changed everything: When our mind, body & soul are in balance, most problems begin to dissolve.</p>
-                        <p className="font-semibold text-[#2b2b2b]" style={{ textAlign: 'justify' }}>Now, my mission is to help other people step into their fullest potential. I don't offer quick fixes. Instead, to fight those inner battles I help you build an Arsenal with strategies and breakthroughs that I have lived, tested and mastered myself.</p>
+                        <p className="font-semibold" style={{ textAlign: 'justify', color: 'var(--theme-text)' }}>Now, my mission is to help other people step into their fullest potential. I don't offer quick fixes. Instead, to fight those inner battles I help you build an Arsenal with strategies and breakthroughs that I have lived, tested and mastered myself.</p>
                     </div>
                 </div>
             </div>

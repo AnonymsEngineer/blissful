@@ -4,7 +4,7 @@ import ImageFrame from '../common/ImageFrame';
 import Section from '../common/Section';
 
 const Hero = ({ onApplyClick }) => (
-    <Section id="home" className="pt-32 pb-20">
+    <Section id="home" className="pt-24 pb-20">
         <div className="p-8 md:p-12 rounded-3xl shadow-sm border border-[var(--theme-border)]/5 grid md:grid-cols-3 gap-12 items-center" style={{ backgroundColor: 'var(--theme-card-background)' }}>
             <div className="space-y-6 md:col-span-2 flex flex-col items-center md:items-start text-center md:text-left">
                 <h2 className="text-3xl md:text-5xl font-bold leading-tight" style={{ color: 'var(--theme-text)' }}>

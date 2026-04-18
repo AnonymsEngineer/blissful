@@ -101,7 +101,8 @@ const Navbar = () => {
                             key={item.name}
                             to={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className={`text-sm font-medium transition-colors duration-600 ${isScrolled ? (activeSection === item.name.toLowerCase() ? 'text-white font-bold' : 'text-white/70 hover:text-white/80') : (activeSection === item.name.toLowerCase() ? 'font-bold' : 'opacity-70')}`}
+                            aria-current={activeSection === item.name.toLowerCase() ? 'page' : undefined}
+                            className={`text-sm font-medium transition-colors duration-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] rounded px-2 py-1 ${isScrolled ? (activeSection === item.name.toLowerCase() ? 'text-white font-bold' : 'text-white/70 hover:text-white/80') : (activeSection === item.name.toLowerCase() ? 'font-bold' : 'opacity-70')}`}
                             style={!isScrolled ? { color: activeSection === item.name.toLowerCase() ? 'var(--theme-primary)' : 'var(--theme-text)' } : {}}
                         >
                             {item.name}
@@ -112,7 +113,10 @@ const Navbar = () => {
                 {/* Mobile Menu Button */}
                 <button
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    className="md:hidden p-4 rounded-lg transition-colors duration-600"
+                    aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                    aria-expanded={isMobileMenuOpen}
+                    aria-controls="mobile-menu"
+                    className="md:hidden p-4 rounded-lg transition-colors duration-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)]"
                     style={!isScrolled ? { color: 'var(--theme-text)' } : { color: 'white' }}
                 >
                     {isMobileMenuOpen ? (
@@ -125,14 +129,15 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className={`md:hidden border-t py-4 px-6 transition-colors duration-600 ${isScrolled ? 'border-white/10' : 'border-[var(--theme-border)]/10'}`} style={isScrolled ? { backgroundColor: 'var(--theme-primary)' } : { backgroundColor: 'var(--theme-background)' }}>
+                <div id="mobile-menu" className={`md:hidden border-t py-4 px-6 transition-colors duration-600 ${isScrolled ? 'border-white/10' : 'border-[var(--theme-border)]/10'}`} style={isScrolled ? { backgroundColor: 'var(--theme-primary)' } : { backgroundColor: 'var(--theme-background)' }}>
                     <div className="flex flex-col space-y-4">
                         {navItems.map((item) => (
                             <Link
                                 key={item.name}
                                 to={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className={`font-medium py-2 transition-colors duration-600 ${isScrolled ? 'text-white/70 hover:text-white/80' : 'opacity-70'}`}
+                                aria-current={activeSection === item.name.toLowerCase() ? 'page' : undefined}
+                                className={`font-medium py-2 transition-colors duration-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] rounded px-2 ${isScrolled ? 'text-white/70 hover:text-white/80' : 'opacity-70'}`}
                                 style={!isScrolled ? { color: 'var(--theme-text)' } : {}}
                             >
                                 {item.name}

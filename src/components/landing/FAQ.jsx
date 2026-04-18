@@ -10,7 +10,7 @@ const FAQ = ({ openFaq, toggleFaq, className = '' }) => (
                 transition: all 0.3s ease;
             }
             .faq-item:not(.faq-open):hover {
-                background-color: var(--theme-primary)08;
+                background-color: rgba(128, 0, 0, 0.08);
                 border-radius: 0.75rem;
             }
             .faq-item:not(.faq-open):hover .faq-question {
@@ -39,13 +39,19 @@ const FAQ = ({ openFaq, toggleFaq, className = '' }) => (
                                 : 'px-4'
                                 }`}
                         >
-                            <button onClick={() => toggleFaq(index)} className="w-full text-left py-4 flex justify-between items-center group">
+                            <button
+                                onClick={() => toggleFaq(index)}
+                                aria-expanded={isOpen}
+                                aria-controls={`faq-answer-${index}`}
+                                id={`faq-question-${index}`}
+                                className="w-full text-left py-5 flex justify-between items-center group focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] rounded"
+                            >
                                 <span className="faq-question text-lg font-semibold transition-all" style={isOpen ? { color: 'var(--theme-primary)' } : { color: 'var(--theme-text)', opacity: 0.7 }}>
                                     {faq.q}
                                 </span>
                                 <ChevronDown className={`faq-icon w-4 h-4 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} style={isOpen ? { color: 'var(--theme-primary)' } : { color: 'var(--theme-primary)', opacity: 0.6 }} strokeWidth={3} />
                             </button>
-                            <div className={`faq-content ${isOpen ? 'open' : ''}`}>
+                            <div id={`faq-answer-${index}`} className={`faq-content ${isOpen ? 'open' : ''}`} aria-labelledby={`faq-question-${index}`}>
                                 <div className="text-lg opacity-70 leading-relaxed pb-4">{faq.a}</div>
                             </div>
                         </div>

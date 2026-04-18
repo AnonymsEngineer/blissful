@@ -172,17 +172,20 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
                         <div className="input-group">
                             <input
                                 type="text"
+                                id="name"
                                 placeholder=" "
                                 value={formData.name}
                                 onChange={(e) => {
                                     setFormData({ ...formData, name: e.target.value });
                                     setErrors({ ...errors, name: validateName(e.target.value) });
                                 }}
-                                className={`input-field ${errors.name ? 'border-red-500' : ''}`}
+                                className={`input-field focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] ${errors.name ? 'border-red-500' : ''}`}
+                                aria-invalid={!!errors.name}
+                                aria-describedby={errors.name ? 'name-error' : undefined}
                             />
-                            <label className="floating-label">Full Name *</label>
+                            <label htmlFor="name" className="floating-label">Full Name *</label>
                             {errors.name && (
-                                <p className="text-red-500 text-sm flex items-center mt-2">
+                                <p id="name-error" className="text-red-500 text-sm flex items-center mt-2">
                                     <AlertCircle className="w-4 h-4 mr-1" />
                                     {errors.name}
                                 </p>
@@ -192,17 +195,20 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
                         <div className="input-group">
                             <input
                                 type="tel"
+                                id="phone"
                                 placeholder=" "
                                 value={formData.phone}
                                 onChange={(e) => {
                                     setFormData({ ...formData, phone: e.target.value });
                                     setErrors({ ...errors, phone: validatePhone(e.target.value) });
                                 }}
-                                className={`input-field ${errors.phone ? 'border-red-500' : ''}`}
+                                className={`input-field focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] ${errors.phone ? 'border-red-500' : ''}`}
+                                aria-invalid={!!errors.phone}
+                                aria-describedby={errors.phone ? 'phone-error' : undefined}
                             />
-                            <label className="floating-label">Phone Number *</label>
+                            <label htmlFor="phone" className="floating-label">Phone Number *</label>
                             {errors.phone && (
-                                <p className="text-red-500 text-sm flex items-center mt-2">
+                                <p id="phone-error" className="text-red-500 text-sm flex items-center mt-2">
                                     <AlertCircle className="w-4 h-4 mr-1" />
                                     {errors.phone}
                                 </p>
@@ -211,21 +217,24 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
 
                         <div className="input-group">
                             <select
+                                id="lookingFor"
                                 value={formData.lookingFor || ''}
                                 onChange={(e) => {
                                     setFormData({ ...formData, lookingFor: e.target.value });
                                     setErrors({ ...errors, lookingFor: validateLookingFor(e.target.value) });
                                 }}
-                                className={`input-field ${errors.lookingFor ? 'border-red-500' : ''}`}
+                                className={`input-field focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] ${errors.lookingFor ? 'border-red-500' : ''}`}
                                 style={{ paddingTop: '1.5rem', paddingBottom: '0.5rem' }}
+                                aria-invalid={!!errors.lookingFor}
+                                aria-describedby={errors.lookingFor ? 'lookingFor-error' : undefined}
                             >
                                 <option value="" disabled>Select an option</option>
                                 <option value="Personal">Personal</option>
                                 <option value="Group Workshop">Group Workshop</option>
                             </select>
-                            <label className="floating-label" style={{ top: '0', fontSize: '0.75rem', opacity: 1, color: 'var(--theme-primary)', fontWeight: 500 }}>I am Looking for *</label>
+                            <label htmlFor="lookingFor" className="floating-label" style={{ top: '0', fontSize: '0.75rem', opacity: 1, color: 'var(--theme-primary)', fontWeight: 500 }}>I am Looking for *</label>
                             {errors.lookingFor && (
-                                <p className="text-red-500 text-sm flex items-center mt-2">
+                                <p id="lookingFor-error" className="text-red-500 text-sm flex items-center mt-2">
                                     <AlertCircle className="w-4 h-4 mr-1" />
                                     {errors.lookingFor}
                                 </p>
@@ -235,17 +244,20 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
                         <div className="input-group">
                             <input
                                 type="email"
+                                id="email"
                                 placeholder=" "
                                 value={formData.email}
                                 onChange={(e) => {
                                     setFormData({ ...formData, email: e.target.value });
                                     setErrors({ ...errors, email: validateEmail(e.target.value) });
                                 }}
-                                className={`input-field ${errors.email ? 'border-red-500' : ''}`}
+                                className={`input-field focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[var(--theme-primary)] ${errors.email ? 'border-red-500' : ''}`}
+                                aria-invalid={!!errors.email}
+                                aria-describedby={errors.email ? 'email-error' : undefined}
                             />
-                            <label className="floating-label">Email Address</label>
+                            <label htmlFor="email" className="floating-label">Email Address</label>
                             {errors.email && (
-                                <p className="text-red-500 text-sm flex items-center mt-2">
+                                <p id="email-error" className="text-red-500 text-sm flex items-center mt-2">
                                     <AlertCircle className="w-4 h-4 mr-1" />
                                     {errors.email}
                                 </p>

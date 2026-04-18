@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anonymsengineer.github.io/blissful/sitemap.xml
