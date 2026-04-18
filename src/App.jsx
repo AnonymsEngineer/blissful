@@ -145,7 +145,7 @@ export default function App() {
   const themeColors = getThemeColors();
 
   return (
-    <HashRouter basename="/blissful">
+    <HashRouter>
       <div
         className="min-h-screen selection:text-white"
         style={{
