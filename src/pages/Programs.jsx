@@ -18,7 +18,7 @@ const Programs = () => {
     const [showApplicationForm, setShowApplicationForm] = useState(false);
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [showLoader, setShowLoader] = useState(false);
-    const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
+    const [formData, setFormData] = useState({ name: '', phone: '', email: '', lookingFor: '' });
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -31,7 +31,7 @@ const Programs = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         setShowSuccessPopup(true);
-        setFormData({ name: '', phone: '', email: '' });
+        setFormData({ name: '', phone: '', email: '', lookingFor: '' });
     };
 
     const closeSuccessPopup = () => {
@@ -82,14 +82,14 @@ const Programs = () => {
             <Section className="py-20">
                 <div className="rounded-3xl shadow-sm border border-[var(--theme-border)]/5 overflow-hidden" style={{ backgroundColor: 'var(--theme-card-background)' }}>
                     <div className="p-8 md:p-12 text-center">
-                        <h1 className="text-5xl font-bold" style={{ color: 'var(--theme-primary)' }}>Workshop & Group Session</h1>
+                        <h2 className="text-4xl font-bold" style={{ color: 'var(--theme-primary)' }}>Workshop & Group Session</h2>
                     </div>
 
                     <div className="grid md:grid-cols-4 items-stretch">
                         <div className="md:col-span-2 p-8 md:p-12 flex flex-col justify-center">
                             <div className="space-y-4 opacity-80 leading-relaxed text-lg">
                                 <p style={{ textAlign: 'justify' }}>Through customised workshops and group sessions, we create real, meaningful impact at a larger scale.</p>
-                                <p style={{ textAlign: 'justify' }}>Each session combines practical tools with the motivation needed to <span style={{ backgroundColor: 'rgba(128, 0, 0, 0.25)', color: 'black', padding: '2px 4px', borderRadius: '5px' }}>improve focus, productivity, time management, clear communication, well-being, and more.</span> Every workshop is interactive, engaging, and tailored to your group.</p>
+                                <p style={{ textAlign: 'justify' }}>Each session combines practical tools with the motivation needed to <span style={{ backgroundColor: 'rgba(128, 0, 0, 0.25)', color: 'black', padding: '2px 4px', borderRadius: '5px' }}>improve focus, productivity, time management, clear communication, well-being, and more.</span> Every workshop is interactive, engaging, and tailored to your group's needs.</p>
                             </div>
                         </div>
                         <div className="md:col-span-2 p-8">

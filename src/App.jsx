@@ -14,7 +14,7 @@ export default function App() {
   const [showApplicationForm, setShowApplicationForm] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', lookingFor: '' });
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -100,7 +100,7 @@ export default function App() {
     setShowLoader(true);
     setTimeout(() => {
       setShowLoader(false);
-      setFormData({ name: '', phone: '', email: '' });
+      setFormData({ name: '', phone: '', email: '', lookingFor: '' });
       setShowApplicationForm(false);
       window.scrollTo(0, 0);
     }, 1000);

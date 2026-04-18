@@ -32,22 +32,29 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
         return '';
     };
 
+    const validateLookingFor = (lookingFor) => {
+        if (!lookingFor || lookingFor === '') return 'Please select an option';
+        return '';
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         const nameError = validateName(formData.name);
         const phoneError = validatePhone(formData.phone);
         const emailError = validateEmail(formData.email);
+        const lookingForError = validateLookingFor(formData.lookingFor);
 
         const newErrors = {
             name: nameError,
             phone: phoneError,
-            email: emailError
+            email: emailError,
+            lookingFor: lookingForError
         };
 
         setErrors(newErrors);
 
-        if (nameError || phoneError || emailError) {
+        if (nameError || phoneError || emailError || lookingForError) {
             return;
         }
 
@@ -63,6 +70,7 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
                     name: formData.name,
                     phone: formData.phone,
                     email: formData.email,
+                    lookingFor: formData.lookingFor,
                 }),
             });
 
@@ -153,14 +161,14 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
                 </button>
             </div>
 
-            <Section className="pt-8">
-                <div className="rounded-[2.5rem] shadow-xl border overflow-hidden max-w-2xl mx-auto" style={{ backgroundColor: 'var(--theme-card-background)', borderColor: 'var(--theme-border)', borderOpacity: 0.1 }}>
-                    <div className="p-8 md:p-12 text-center text-white" style={{ backgroundColor: 'var(--theme-primary)' }}>
-                        <h1 className="text-3xl md:text-4xl font-bold mb-4">Application Form</h1>
-                        <p className="opacity-80">Tell us a bit about yourself to get started on your transformation journey.</p>
+            <Section className="pt-4">
+                <div className="rounded-[2rem] shadow-xl border overflow-hidden max-w-2xl mx-auto" style={{ backgroundColor: 'var(--theme-card-background)', borderColor: 'var(--theme-border)', borderOpacity: 0.1 }}>
+                    <div className="p-6 md:p-8 text-center text-white" style={{ backgroundColor: 'var(--theme-primary)' }}>
+                        <h1 className="text-2xl md:text-3xl font-bold mb-2">Application Form</h1>
+                        <p className="opacity-80 text-sm">Tell us a bit about yourself to get started on your transformation journey.</p>
                     </div>
 
-                    <form onSubmit={handleSubmit} className="p-8 md:p-12 space-y-8">
+                    <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-6">
                         <div className="input-group">
                             <input
                                 type="text"
@@ -197,6 +205,29 @@ const ApplicationForm = ({ formData, setFormData, onFormSubmit, showSuccessPopup
                                 <p className="text-red-500 text-sm flex items-center mt-2">
                                     <AlertCircle className="w-4 h-4 mr-1" />
                                     {errors.phone}
+                                </p>
+                            )}
+                        </div>
+
+                        <div className="input-group">
+                            <select
+                                value={formData.lookingFor || ''}
+                                onChange={(e) => {
+                                    setFormData({ ...formData, lookingFor: e.target.value });
+                                    setErrors({ ...errors, lookingFor: validateLookingFor(e.target.value) });
+                                }}
+                                className={`input-field ${errors.lookingFor ? 'border-red-500' : ''}`}
+                                style={{ paddingTop: '1.5rem', paddingBottom: '0.5rem' }}
+                            >
+                                <option value="" disabled>Select an option</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Group Workshop">Group Workshop</option>
+                            </select>
+                            <label className="floating-label" style={{ top: '0', fontSize: '0.75rem', opacity: 1, color: 'var(--theme-primary)', fontWeight: 500 }}>I am Looking for *</label>
+                            {errors.lookingFor && (
+                                <p className="text-red-500 text-sm flex items-center mt-2">
+                                    <AlertCircle className="w-4 h-4 mr-1" />
+                                    {errors.lookingFor}
                                 </p>
                             )}
                         </div>

@@ -42,7 +42,8 @@ const ImageCarousel = () => {
                 <ImageFrame
                     src={images[currentIndex]}
                     alt={`Program highlight ${currentIndex + 1}`}
-                    className="w-full h-96 md:h-[500px]"
+                    className="w-full h-64 md:h-[500px]"
+                    objectPosition="center"
                 />
 
                 <button
