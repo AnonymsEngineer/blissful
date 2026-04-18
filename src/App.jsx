@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Loader2 } from 'lucide-react';
 
 // Import components
@@ -145,7 +145,7 @@ export default function App() {
   const themeColors = getThemeColors();
 
   return (
-    <BrowserRouter basename="/blissful">
+    <HashRouter basename="/blissful">
       <div
         className="min-h-screen selection:text-white"
         style={{
@@ -270,6 +270,6 @@ export default function App() {
           <Route path="/programs" element={<Programs />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
