@@ -10,7 +10,7 @@ const FinalCTA = ({ onApplyClick, className = '' }) => (
                 <h2 className="text-3xl font-bold" style={{ color: 'var(--theme-primary)' }}>Special Note</h2>
                 <p className="text-lg leading-relaxed opacity-80" style={{ color: 'var(--theme-text)', textAlign: 'justify' }}>
                     If you have landed here, it is not by accident.<br />
-                    There is a voice inside you - whispering, telling you it's time to do it. I'll listen to you, guide you & support you in taking necessary actions in transforming your life. As Eminem says, <span style={{ backgroundColor: 'rgba(128, 0, 0, 0.15)', color: 'black', padding: '2px 4px', borderRadius: '5px' }}>"Look, if you had one shot or one opportunity to seize everything you ever wanted in one moment would you capture it or just let it slip?"</span> <br /><br />
+                    There is a voice inside you - whispering, telling you it's time to do it. I'll listen to you, guide you & support you in taking necessary actions in transforming your life. As Eminem says, <span style={{ backgroundColor: 'rgba(128, 0, 0, 0.25)', color: 'black', padding: '2px 4px', borderRadius: '5px' }}>"Look, if you had one shot or one opportunity to seize everything you ever wanted in one moment would you capture it or just let it slip?"</span> <br /><br />
                     I am ready when you are. <br />
                     With Love,<br />
                     ~ Simran

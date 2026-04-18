@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Loader2 } from 'lucide-react';
 
 // Import components
 import ApplicationForm from './components/application/ApplicationForm';
@@ -12,6 +13,7 @@ import { getThemeColors } from './config/theme';
 export default function App() {
   const [showApplicationForm, setShowApplicationForm] = useState(false);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [showLoader, setShowLoader] = useState(false);
   const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
 
   useEffect(() => {
@@ -44,14 +46,42 @@ export default function App() {
       }
     };
 
+    // Disable touch and hold on mobile devices
+    const handleTouchStart = (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    const handleTouchEnd = (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    };
+
+    const handleTouchMove = (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+        return false;
+      }
+    };
+
     document.addEventListener('contextmenu', handleContextMenu);
     document.addEventListener('dragstart', handleDragStart);
     document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('touchstart', handleTouchStart, { passive: false });
+    document.addEventListener('touchend', handleTouchEnd, { passive: false });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     return () => {
       document.removeEventListener('contextmenu', handleContextMenu);
       document.removeEventListener('dragstart', handleDragStart);
       document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+      document.removeEventListener('touchmove', handleTouchMove);
     };
   }, []);
 
@@ -67,21 +97,48 @@ export default function App() {
 
   const closeSuccessPopup = () => {
     setShowSuccessPopup(false);
-    setFormData({ name: '', phone: '', email: '' });
-    setShowApplicationForm(false);
-    window.scrollTo(0, 0);
+    setShowLoader(true);
+    setTimeout(() => {
+      setShowLoader(false);
+      setFormData({ name: '', phone: '', email: '' });
+      setShowApplicationForm(false);
+      window.scrollTo(0, 0);
+    }, 1000);
   };
 
   if (showApplicationForm) {
+    const themeColors = getThemeColors();
     return (
-      <ApplicationForm
-        formData={formData}
-        setFormData={setFormData}
-        onFormSubmit={handleFormSubmit}
-        showSuccessPopup={showSuccessPopup}
-        closeSuccessPopup={closeSuccessPopup}
-        onBackClick={() => setShowApplicationForm(false)}
-      />
+      <div
+        style={{
+          fontFamily: "'Inter', sans-serif",
+          backgroundColor: themeColors.background,
+          color: themeColors.text,
+          '--theme-background': themeColors.background,
+          '--theme-text': themeColors.text,
+          '--theme-primary': themeColors.primary,
+          '--theme-secondary': themeColors.secondary,
+          '--theme-card-background': themeColors.cardBackground,
+          '--theme-border': themeColors.border,
+        }}
+      >
+        <ApplicationForm
+          formData={formData}
+          setFormData={setFormData}
+          onFormSubmit={handleFormSubmit}
+          showSuccessPopup={showSuccessPopup}
+          closeSuccessPopup={closeSuccessPopup}
+          onBackClick={() => setShowApplicationForm(false)}
+        />
+        {showLoader && (
+          <div className="fixed inset-0 z-[60] flex items-center justify-center bg-white/90 backdrop-blur-sm">
+            <div className="flex flex-col items-center space-y-4">
+              <Loader2 className="w-12 h-12 animate-spin" style={{ color: 'var(--theme-primary)' }} />
+              <p className="text-lg font-medium" style={{ color: 'var(--theme-text)' }}>Returning to website...</p>
+            </div>
+          </div>
+        )}
+      </div>
     );
   }
 
