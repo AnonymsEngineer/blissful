@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
 
     const navItems = [
-        { name: 'Home', href: '#home' },
-        { name: 'About', href: '#about' },
-        { name: 'Testimonials', href: '#testimonials' },
-        { name: 'FAQ', href: '#faq' },
+        { name: 'Home', href: '/', route: '/' },
+        { name: 'About', href: '/about', route: '/about' },
+        { name: 'Testimonials', href: '/testimonials', route: '/testimonials' },
+        { name: 'FAQ', href: '/faq', route: '/faq' },
+        { name: 'Programs', href: '/programs', route: '/programs', isRoute: true },
     ];
 
     useEffect(() => {
@@ -42,9 +46,23 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToSection = (e, href) => {
+    const scrollToSection = (e, href, route) => {
         e.preventDefault();
-        if (href === '#home') {
+
+        // If it's a route navigation (like /programs), let Link handle it
+        if (route && route !== '/') {
+            setIsMobileMenuOpen(false);
+            return;
+        }
+
+        // If on programs page, navigate to home with hash
+        if (location.pathname !== '/' && !href.startsWith('/')) {
+            navigate(href);
+            setIsMobileMenuOpen(false);
+            return;
+        }
+
+        if (href === '#home' || href === '/') {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
@@ -79,15 +97,15 @@ const Navbar = () => {
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex items-center space-x-8">
                     {navItems.map((item) => (
-                        <a
+                        <Link
                             key={item.name}
-                            href={item.href}
-                            onClick={(e) => scrollToSection(e, item.href)}
-                            className={`text-sm font-medium transition-colors duration-600 ${isScrolled ? (activeSection === item.href.substring(1) ? 'text-white font-bold' : 'text-white/70 hover:text-white/80') : (activeSection === item.href.substring(1) ? 'font-bold' : 'opacity-70')}`}
-                            style={!isScrolled ? { color: activeSection === item.href.substring(1) ? 'var(--theme-primary)' : 'var(--theme-text)' } : {}}
+                            to={item.href}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`text-sm font-medium transition-colors duration-600 ${isScrolled ? (activeSection === item.name.toLowerCase() ? 'text-white font-bold' : 'text-white/70 hover:text-white/80') : (activeSection === item.name.toLowerCase() ? 'font-bold' : 'opacity-70')}`}
+                            style={!isScrolled ? { color: activeSection === item.name.toLowerCase() ? 'var(--theme-primary)' : 'var(--theme-text)' } : {}}
                         >
                             {item.name}
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
@@ -110,15 +128,15 @@ const Navbar = () => {
                 <div className={`md:hidden border-t py-4 px-6 transition-colors duration-600 ${isScrolled ? 'border-white/10' : 'border-[var(--theme-border)]/10'}`} style={isScrolled ? { backgroundColor: 'var(--theme-primary)' } : { backgroundColor: 'var(--theme-background)' }}>
                     <div className="flex flex-col space-y-4">
                         {navItems.map((item) => (
-                            <a
+                            <Link
                                 key={item.name}
-                                href={item.href}
-                                onClick={(e) => scrollToSection(e, item.href)}
+                                to={item.href}
+                                onClick={() => setIsMobileMenuOpen(false)}
                                 className={`font-medium py-2 transition-colors duration-600 ${isScrolled ? 'text-white/70 hover:text-white/80' : 'opacity-70'}`}
                                 style={!isScrolled ? { color: 'var(--theme-text)' } : {}}
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                         ))}
                     </div>
                 </div>
