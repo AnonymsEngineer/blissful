@@ -3,7 +3,7 @@ import React from 'react';
 const ImageFrame = ({ src, alt, className = '', objectPosition }) => (
     <div className={`rounded-2xl overflow-hidden shadow-md border border-[var(--theme-border)]/5 ${className}`}>
         <img
-            src={src.startsWith('http') ? src : `/blissful/${src}`}
+            src={src.startsWith('http') ? src : `/${src}`}
             alt={alt}
             loading="lazy"
             className="w-full h-full object-cover"
