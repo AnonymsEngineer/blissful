@@ -44,7 +44,7 @@ const Testimonials = ({ selectedTestimonial, setSelectedTestimonial }) => {
                                     <div className="px-8 pb-8">
                                         <div className="flex items-center space-x-4 border-t border-[var(--theme-border)]/5 pt-6">
                                             <img
-                                                src={item.img.startsWith('http') ? item.img : `/blissful/${item.img}`}
+                                                src={item.img.startsWith('http') ? item.img : `/${item.img}`}
                                                 alt={item.name}
                                                 className="w-12 h-12 rounded-full border-2 border-white shadow-sm"
                                             />
@@ -92,7 +92,7 @@ const Testimonials = ({ selectedTestimonial, setSelectedTestimonial }) => {
                                 <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
                                     <div className="relative">
                                         <img
-                                            src={selectedTestimonial.img.startsWith('http') ? selectedTestimonial.img : `/blissful/${selectedTestimonial.img}`}
+                                            src={selectedTestimonial.img.startsWith('http') ? selectedTestimonial.img : `/${selectedTestimonial.img}`}
                                             alt={selectedTestimonial.name}
                                             className="w-16 h-16 md:w-24 md:h-24 rounded-2xl border-4 border-white shadow-sm object-cover"
                                         />
