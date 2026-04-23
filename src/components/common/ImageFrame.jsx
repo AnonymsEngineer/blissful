@@ -8,7 +8,14 @@ const ImageFrame = ({ src, alt, className = '', objectPosition, loading = 'lazy'
             loading={loading}
             fetchPriority={fetchPriority}
             className="w-full h-full object-cover"
-            style={objectPosition ? { objectPosition } : undefined}
+            style={{
+                objectPosition: objectPosition || undefined,
+                userSelect: 'none',
+                WebkitUserSelect: 'none',
+                WebkitTouchCallout: 'none',
+                WebkitUserDrag: 'none',
+                KhtmlUserDrag: 'none'
+            }}
             onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80'; }}
         />
     </div>
