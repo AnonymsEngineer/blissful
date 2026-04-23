@@ -61,19 +61,11 @@ export default function App() {
       }
     };
 
-    const handleTouchMove = (e) => {
-      if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-      }
-    };
-
     document.addEventListener('contextmenu', handleContextMenu);
     document.addEventListener('dragstart', handleDragStart);
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('touchstart', handleTouchStart, { passive: false });
     document.addEventListener('touchend', handleTouchEnd, { passive: false });
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
 
     return () => {
       document.removeEventListener('contextmenu', handleContextMenu);
@@ -81,7 +73,6 @@ export default function App() {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
-      document.removeEventListener('touchmove', handleTouchMove);
     };
   }, []);
 

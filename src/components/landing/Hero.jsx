@@ -23,6 +23,8 @@ const Hero = ({ onApplyClick }) => (
                     alt="Workspace"
                     className="h-64 md:h-full min-h-[250px] w-full"
                     objectPosition="top"
+                    loading="eager"
+                    fetchPriority="high"
                 />
             </div>
         </div>
